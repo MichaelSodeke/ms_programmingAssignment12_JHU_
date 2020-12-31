@@ -1,0 +1,170 @@
+[report draft-1]
+
+-----------------------------------------------------------------------------------------------------------------
+[outline]
+- One thing that people regularly do is quantify how much of a particular activity they do, but they rarely
+  quantify how well they do it. In this project, your goal will be to use data from accelerometers on the
+  belt, forearm, arm, and dumbell of 6 participants.
+
+- objective 1:
+	> predict the manner in which they did the exercise, using the "classe" variable.
+	> create a report describing:
+		- how you built your model
+		- how you used cross validation
+		- what you think the expected out of sample error is, and
+		- why you made the choices you did
+
+- objective 2: 
+	> Peer Review portion should consist of:
+		- a link to a Github repo with your R markdown and 
+		- compiled HTML file describing your analysis
+
+- objective 3: [/]
+	> Apply your machine learning algorithm to the 20 test cases available in the test data above and
+	> submit your predictions in appropriate format to the Course Project Prediction Quiz for automated grading
+
+
+-----------------------------------------------------------------------------------------------------------------
+[draft-1]
+
+[[executive summary]]
+
+[background]
+Traditionally, \textbf{Human Activity Recognition} has focused on predicting \emph{which} activity was
+performed at a specific point in time. However, researchers at Groupware focused on
+investigating \emph{how well} an activity was performed by the wearer. Six young participants
+between 20-28 years were asked to perform a series of five activities to assist Groupware
+with this investigation.
+
+[model selection]
+The goal of \textsc{case i} was to select a model function appropriate for predicting the manner in
+which participants perfored a series of dumbbell exercises. It turned out that the Random Forest
+algorithm (with all covariates) performed the best out of the four, with an out of sample error
+(OSE) of $0.0012$.
+
+[random forest prediction]
+\textsc{case ii} focused on employing the Random Forest algorthm selected in \textsc{case i} for predicting
+the manner in which participants perfomred a certain activity. A score of $20/20$ was receieved after
+applying prediction results on the quiz.
+
+
+
+
+[[background]]
+\textbf{Human Activity Recognition} has gained attention from the computing research community.
+\textsc{har} has many potential applications, such as: elderly monitoring, life log systems for
+monitoring energy expenditure and for supporting weight-loss programs, and digital assistants
+for weight lifting exercises.
+
+Traditionally, \textsc{har} has focused on predicting \emph{which} activity was performed at a specific
+point in time. However, researchers at Groupware focused on investigating \textsc{how well} an
+activity was performed by the wearer. Six young participants between 20-28 years performed
+"one set of 10 repetitions of the Unilateral Dumbbell Biceps Curl in five different fashions".
+These performances are classified as: exactly according to the specification (Class A),
+throwing the elbows to the front (Class B), lifting the dumbbell only halfway (Class C),
+lowering the dumbbell only halfway (Class D) and throwing the hips to the front (Class E).
+\href{http://groupware.les.inf.puc-rio.br/har#ixzz6i9dCwkfq}{Read more here: /}
+
+
+
+
+[[case I: model selection]]
+
+[INTRO]
+The goal of \textsc{case i} is to select a model function appropriate for predicting the manner in
+which participants perfored a series of dumbbell exercises. First, a hypothesis is constructed,
+providing a framework to build the analysis on. Next, datasets are cleaned and prepared for
+further analysis. Descriptive statistics is employed to explore data contents. Prediction
+Study Design is used to define the error rate and perform K-fold cross validation. Finally,
+four model functions and their accuracies are compared to determine the best performer.
+
+[hypothesis]
+One thing that people regularly do is quantify how much of a particular activity they
+do, but they rarely quantify how well they do it. Six young participants between 20-28 years
+performed "one set of 10 repetitions of the Unilateral Dumbbell Biceps Curl in five
+different fashions". The goal of this report is to predict the manner in which each exercise
+was performed. \emph{So, can machine learning be used to predict correct and incorrect movements
+for an exercise to help new gym-goers improve their workouts}? In other words, \emph{can machine
+learning technology be used to create an A.I. fitness coach}?  
+
+[data engineering]
+\href{http://groupware.les.inf.puc-rio.br/har#ixzz6i9dCwkfq}{A training and testing set were downloaded from Groupware: /}.
+Upon inspection of the covariates, some have missing values. The R-script file
+\textbf{1-C1 dataEng.r} takes care of this issue by eliminating covariates with missing values
+and any redundant covariates that are not appropriate for constructing the model. In
+addition, the training set is partitioned into a 60\% training and 40\% testing set. Cross
+validation will be used only on the sub training set.
+
+[C]
+
+[descriptive statistics]
+The goal of Groupware is to investigate how well each participant performed each dumbbell
+exercise. In \textsc{figure 1.}, descriptive statistics show both Adelmo and Jeremy have the best
+performance out of the six participants. The R-script file \textbf{2-C1 descriptiveStats.r} performs
+additional data transformations to construct the desired plots.
+
+[I]
+
+[prediction study design: defining error rate]
+The first step in Prediction Study Design is to define the error rate. For now
+Accuracy will be employed to determine which model function is best appropriate for
+answering the above hypothesis. The R-script file \textbf{3-C1 predStudyDesign.r} will assist
+in definging the error rate and in K-fold cross validation.
+
+\begin{equation*}
+\begin{aligned}
+ER_{accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\end{aligned}
+\end{equation*}
+
+[prediction study design: K-fold cross validation]
+Cross validation is used on the sub training set, which will be partioned repeatedly based
+on $K = 5$ folds into another 60\% training and 40\% test set. 
+
+Four models are trained with K-fold cross validation and plotted to determine accuracy and
+examine error rates. The first model employes a \textbf{CART} algorithm with all covariates, while
+the second employes a \textbf{Random Forest} algorithm with all covariates. The third and fourth models
+are the same as the previous two models, but with selected covariates: \textbf{classe}, \textbf{total accel belt},
+\textbf{total accel arm}, \textbf{total accel dumbbell}, and \textbf{total accel forearm}.
+
+[C]
+
+It turns out that the Random Forest algorithm (with all covariates) performed the best out
+of the four, with an out of sample error (OSE) of $0.0012$. In addition, \textsc{figure 2.}
+shows that reducing covariates for classification algorithms has a negative impact on
+performance and increases the error rate.
+
+[C]
+[R]
+[I]
+
+
+
+
+[[case II: random forest prediction]]
+
+[INTRO]
+\textsc{case ii} focuses on employing the model function selected in \textsc{case i} for predicting the manner
+in which participants perfomred a certain activity. The first prediction is based on the
+testing set produced when the training set was partitioned. The second prediction is based on
+the testing set provided by Groupware. Results from the second prediction is then applied to
+the quiz to determine if the predictions were correct. The report ends with a 
+discussion on the results and the future of Human Activity Recognition.
+
+[prediction]
+The first prediction is conducted on the 40\% testing set, created when the training set
+was partitioned. The second prediction is based on the testing set provided by Groupware.
+A score of $20/20$ was receieved after applying prediction results on the quiz. The R-script
+\textbf{4-C2 prediction.r} performs both predictions and provides the OSE mentioned in \textsc{case i}.
+
+[C]
+[R]
+
+[discussion]
+Results from the Random Forest algorithm show promissing results. While A.I. is still at
+its infancy, it will develop to a point were \textsc{har} can assist gym-goers with various
+exercises. The future of \textsc{har} seems bright. I would suggest more research and development into
+\textsc{har} and bioinformatics. With this development, \textsc{har} can inform doctors and device users
+of certain body activities and their association with cellular activities. The Random Forest
+algorithms seems most applicable for classification predictions of this calibar. However, it
+may be replaced by more advanced algorithms of its kind in the future.

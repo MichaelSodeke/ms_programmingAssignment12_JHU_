@@ -1,0 +1,16 @@
+# [0-loadPackages.r]
+
+message("\n\n [0.] | loading packages")
+message(" -----------------------------------------------------------------")
+suppressMessages( require(dplyr) ); suppressMessages( require(ggplot2) )
+suppressMessages( require(stringr) ); suppressMessages( require(lubridate) )
+suppressMessages( require(forcats) ); suppressMessages( require(ggpubr) )
+suppressMessages( require(extrafont) ); suppressMessages( require(caret) )
+suppressMessages( require(mustashe) ); suppressMessages( require(tictoc) )
+suppressMessages( require(ggdendro) ); suppressMessages( require(data.table) )
+suppressMessages( require(reshape2) ); suppressMessages( require(doParallel) )
+message("\n\n [0.1] | Loading predefined scripts")
+message(" -----------------------------------------------------------------")
+source("my_theme.R")
+windowsFonts()
+loadfonts(device="win")

@@ -1,0 +1,11 @@
+\BOOKMARK [2][-]{subsection.0.1}{abstract}{}% 1
+\BOOKMARK [2][-]{subsection.0.2}{background}{}% 2
+\BOOKMARK [1][-]{section.1}{CASE I: MODEL SELECTION}{}% 3
+\BOOKMARK [2][-]{subsection.1.1}{hypothesis}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{data engineering}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.3}{descriptive statistics}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.4}{prediction study design: defining error rate}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.5}{prediction study design: k-fold cross validation}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{CASE II: RANDOM FOREST PREDICTION}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{prediction}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.2}{discussion}{section.2}% 11
