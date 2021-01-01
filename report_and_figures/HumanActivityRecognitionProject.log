@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.26)  31 DEC 2020 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.26)  31 DEC 2020 22:20
 entering extended mode
 **C:/Users/msode/Documents/GitHub/ms_programmingAssignment12_JHU_/report_and_fi
 gures/HumanActivityRecognitionProject.tex
@@ -832,16 +832,15 @@ ed.
 <./figures/plot1.png, id=77, 1280.33533pt x 711.28134pt>
 File: ./figures/plot1.png Graphic file (type png)
 <use ./figures/plot1.png>
-Package pdftex.def Info: ./figures/plot1.png  used on input line 439.
+Package pdftex.def Info: ./figures/plot1.png  used on input line 444.
 (pdftex.def)             Requested size: 459.63097pt x 255.34477pt.
- [5 <./figures/plot1.png>]
 \openout3 = `HumanActivityRecognitionProject.pyg'.
 
 runsystem(pygmentize -l r -f latex -P commandprefix=PYG -F tokenmerge -o HumanA
 ctivityRecognitionProject.out.pyg HumanActivityRecognitionProject.pyg)...execut
 ed.
 
-
+ [5 <./figures/plot1.png>]
 (HumanActivityRecognitionProject.out.pyg)
 \openout3 = `HumanActivityRecognitionProject.pyg'.
 
@@ -886,7 +885,7 @@ ed.
 <./figures/plot2.png, id=89, 1280.33533pt x 711.28134pt>
 File: ./figures/plot2.png Graphic file (type png)
 <use ./figures/plot2.png>
-Package pdftex.def Info: ./figures/plot2.png  used on input line 640.
+Package pdftex.def Info: ./figures/plot2.png  used on input line 645.
 (pdftex.def)             Requested size: 459.63097pt x 255.34477pt.
  [7] [8 <./figures/plot2.png>]
 \openout3 = `HumanActivityRecognitionProject.pyg'.
@@ -905,13 +904,13 @@ ed.
 
 
 (HumanActivityRecognitionProject.out.pyg)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 757.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 762.
  [9] [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 757.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
 
 (HumanActivityRecognitionProject.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 757.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 757.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
 Package rerunfilecheck Info: File `HumanActivityRecognitionProject.out' has not
  changed.
 (rerunfilecheck)             Checksum: 6DE5FF90250A8565D4AC86DD4AA3228A;729.
@@ -923,7 +922,7 @@ runsystem(del HumanActivityRecognitionProject.out.pyg)...executed.
 Here is how much of TeX's memory you used:
  14470 strings out of 481199
  238005 string characters out of 2915349
- 571123 words of memory out of 3000000
+ 570123 words of memory out of 3000000
  29713 multiletter control sequences out of 15000+200000
  543627 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -940,7 +939,7 @@ ts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.p
 fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/msode/AppData
 /Roaming/MiKTeX/fonts/type1/public/tex-gyre/qcrr.pfb>
-Output written on HumanActivityRecognitionProject.pdf (10 pages, 626426 bytes).
+Output written on HumanActivityRecognitionProject.pdf (10 pages, 625330 bytes).
 
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)

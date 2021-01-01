@@ -7,7 +7,7 @@ cd
 ls
 cd Documents/GitHub
 ls
-cd ms_programmingAssignment11_JHU_
+cd ms_programmingAssignment12_JHU_
 git --help
 git init 
 git lfs track "my_folder/**" or git add .gitattrubutes
